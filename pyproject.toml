@@ -1,0 +1,23 @@
+[project]
+name = "entropy_simulations"
+version = "0.1.0"
+description = "Interactive Entropy Unification Simulator"
+authors = [
+    { name = "Victor", email = "victor@example.com" } # Placeholder, you can change this
+]
+dependencies = [
+    "streamlit",
+    "numpy",
+    "scipy",
+    "pandas",
+    "altair",
+    "dependency-injector",
+]
+
+[tool.setuptools.packages.find]
+include = ["application", "domain", "infrastructure", "main"]
+namespaces = false
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
