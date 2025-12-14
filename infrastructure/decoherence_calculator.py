@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.linalg import expm
 from scipy.integrate import solve_ivp
 from typing import List, Tuple
 
@@ -151,12 +150,20 @@ class ScipyDecoherenceCalculator(DecoherenceCalculatorPort):
             (0, t_max),
             rho0_vec,
             t_eval=times,
-            method='RK45' # A good general-purpose solver
+            method='RK45', # A good general-purpose solver
+            rtol=1e-8,   # relative tolerance
+            atol=1e-10   # absolut tolerance
         )
 
         # Transpose the solution to get states at each time point
         rho_vec_t = sol.y.T
         rhos = [rho_vec.reshape((dim, dim)) for rho_vec in rho_vec_t]
+
+        # validation
+        max_trace_error = max(abs(np.trace(rho) - 1.0) for rho in rhos)
+        if max_trace_error > 1e-6:
+            import warnings
+            warnings.warn(f"Trace deviation: {max_trace_error:.2e} > 1e-6")
 
         return times, rhos
 

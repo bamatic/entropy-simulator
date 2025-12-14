@@ -524,6 +524,16 @@ def main():
     
     with tab2:
         build_decoherence_tab()
+    
+    st.sidebar.markdown("---")
+    st.sidebar.markdown(
+        """
+        Created by **Victor ZUGADI GARCIA**
+        <br>[GitHub](https://github.com/bamatic/entropy-simulator) | 
+        [LinkedIn](https://www.linkedin.com/in/victor-zugadi-38595655/)
+        """,
+        unsafe_allow_html=True
+    )
 
 
 if __name__ == "__main__":

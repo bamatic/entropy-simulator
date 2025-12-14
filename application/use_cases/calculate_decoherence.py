@@ -24,11 +24,7 @@ class CalculateDecoherenceUseCase:
 
         result = self._calculator.calculate_temporal_evolution(
             quantum_system=quantum_system,
-            bath_temperature=T_bath,
-            t1=1.0,
-            t2=0.5,
-            t_max=10.0,
-            num_points=100,
+            bath_temperature=T_bath
         )
 
         return DecoherenceResponse(
