@@ -88,7 +88,7 @@ S = -k Σ P(R)ln P(R)   S = k ln Ω(E)
 ### **Installation**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/entropy-simulator.git
+git clone https://github.com/bamatic/entropy-simulator.git
 cd entropy-simulator
 
 # Install dependencies
@@ -468,19 +468,19 @@ class NewEntropyCalculator(NewEntropyCalculatorPort):
 
 If you use this simulator in academic work, please cite:
 ```bibtex
-@misc{entropy-simulator-2024,
+@misc{entropy-simulator-2025,
   author = {Your Name},
   title = {Interactive Entropy Unification Simulator},
-  year = {2024},
+  year = {2025},
   publisher = {GitHub},
-  url = {https://github.com/yourusername/entropy-simulator}
+  url = {https://github.com/bamatic/entropy-simulator}
 }
 ```
 
 Related academic work:
 ```bibtex
-@unpublished{yourname2024vonneumann,
-  author = {Your Name},
+@unpublished{VictorZugadiGarcia20254vonneumann,
+  author = {Victor Zugadi-Garcia},
   title = {Von Neumann Entropy: Statistical Unification and the Second Law},
   note = {Statistical Mechanics - UNED},
   year = {2024}
@@ -497,7 +497,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **UNED Statistical Mechanics Course** - Theoretical foundation
+- **UNED Mecánica estadística: Brey Abalo, José Javier; Rubia Pacheco, Juan de la; Rubia Sánchez, Javier de la** - Theoretical foundation
 - **von Neumann (1932)** - Density matrix formalism
 - **Lindblad (1976)** - Master equation for open quantum systems
 
@@ -507,7 +507,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Your Name** - [your.email@example.com](mailto:your.email@example.com)
 
-Project Link: [https://github.com/yourusername/entropy-simulator](https://github.com/yourusername/entropy-simulator)
+Project Link: [https://github.com/bamatic/entropy-simulator](https://github.com/bamatic/entropy-simulator)
 
 ---
 
