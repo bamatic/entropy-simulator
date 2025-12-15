@@ -109,7 +109,8 @@ class ScipyDecoherenceCalculator(DecoherenceCalculatorPort):
             # Excitation (raise spin)
             L_excite = single_qubit_operator(sigma_plus, qubit_idx)
             lindblad_ops.append((gamma_decay * n_thermal, L_excite))
-
+        print(f"DEBUG: n_qubits={n_qubits}, len(lindblad_ops)={len(lindblad_ops)}")
+        print(f"DEBUG: Energías H: {np.unique(np.diag(H))}")
         return H, lindblad_ops
 
     def _lindblad_evolution(
@@ -188,4 +189,5 @@ class ScipyDecoherenceCalculator(DecoherenceCalculatorPort):
         Z = np.sum(np.exp(-beta * energies))
         E_mean = np.sum(energies * np.exp(-beta * energies)) / Z
         S_gibbs = np.log(Z) + beta * E_mean
+        print(f"DEBUG: T={T}, S_Gibbs={S_gibbs:.3f}, Z={Z:.3f}")
         return float(S_gibbs)
